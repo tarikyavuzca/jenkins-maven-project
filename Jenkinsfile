@@ -12,6 +12,14 @@ pipeline {
                 }
             }
         }
+
+        
+        stage('run') {
+            steps {
+                echo 'Testing'
+            }
+        }
+    
         stage('Test') {
             steps {
                 sh 'mvn -f hello-app/pom.xml test'
@@ -24,3 +32,14 @@ pipeline {
         }
     }
 }
+
+// pipeline {
+//     agent any
+//     stages {
+//         stage('run') {
+//             steps {
+//                 echo 'Testing'
+//             }
+//         }
+//     }
+// }

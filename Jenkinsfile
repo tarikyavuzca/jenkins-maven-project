@@ -12,13 +12,6 @@ pipeline {
                 }
             }
         }
-
-        
-        stage('run') {
-            steps {
-                echo 'Testing'
-            }
-        }
     
         stage('Test') {
             steps {
